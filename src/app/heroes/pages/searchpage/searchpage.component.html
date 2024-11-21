@@ -1,0 +1,22 @@
+<div class="flex flex-column">
+    <h4>Buscador</h4>
+    <mat-form-field>
+        <mat-label>Buscador de Heroes</mat-label>
+        <input 
+        [formControl]="searchInput"
+        (input)="searchHero()"
+        [matAutocomplete]="auto"
+        type="text" matInput> <!-- Cambiado de mat-input a matInput -->
+        <mat-autocomplete #auto="matAutocomplete"
+        (optionSelected)="onSelectedOption($event)"
+        >
+              <mat-option *ngFor="let hero of posibleHerores"  [value]="hero">
+                {{hero.superhero}}
+              </mat-option>
+              <mat-option value="" *ngIf="posibleHerores.length===0 && searchInput.value && searchInput.value.length>0">
+                No se encontro nada con este termino {{searchInput.value}}
+              </mat-option>
+          </mat-autocomplete>
+    </mat-form-field>
+</div>
+

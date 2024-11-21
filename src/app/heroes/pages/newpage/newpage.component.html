@@ -1,0 +1,66 @@
+<h3>Heroe
+    <small>Superman</small>
+</h3>
+<mat-divider class="mb-2"> 
+
+</mat-divider>
+<div class="grid">
+     <div class="col-12 sm:col-6">
+        <mat-card>
+            <mat-card-content>
+                <div class="grid">
+                    <mat-form-field class="col-12 sm:col-6">
+                        <mat-label>
+                            SuperHeroe
+                        </mat-label>
+                        <input type="text" matInput required="true">
+                    </mat-form-field>
+                    <mat-form-field class="col-12 sm:col-6">
+                        <mat-label>
+                            AlterEgo
+                        </mat-label>
+                        <input type="text" matInput required="true">
+                    </mat-form-field>
+                    <mat-form-field class="col-12 sm:col-6">
+                        <mat-label>
+                            Personajes
+                        </mat-label>
+                        <input type="text" matInput required="true">
+                    </mat-form-field>
+                    <mat-form-field class="col-12 sm:col-6">
+                        <mat-label>
+                            Primera Aparicion
+                        </mat-label>
+                        <input type="text" matInput required="true">
+                    </mat-form-field>
+                    <mat-form-field class="col-12 sm:col-6">
+                        <mat-label>Creador</mat-label>
+                        <mat-select required>
+                            <mat-option *ngFor="let item of creador" [value]="item.value">
+                                {{item.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="flex justify-content-around">
+                    <button mat-flat-button color="warn">
+                        Borrar
+                    </button>
+                  
+                    <button
+                    mat-flat-button
+                    color="primary"
+                    >
+                    <mat-icon>save</mat-icon>
+                Guardar</button>
+                </div>
+                
+            </mat-card-content>
+        </mat-card>
+     </div>
+     <div class="col-12 sm:col-6">
+        <mat-card>
+            <img [src]="" alt="imagen" mat-card-image>
+        </mat-card>
+     </div>
+</div>
